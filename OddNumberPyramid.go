@@ -14,7 +14,6 @@ func firstInRow(n int) int {
 
 func RowSumOddNumbers (n int) int {
 	firstNum:=firstInRow(n)*2-1
-	fmt.Println(firstNum)
 	sum := firstNum*n + 2*(triangle(n-1))
 	return sum
 }
