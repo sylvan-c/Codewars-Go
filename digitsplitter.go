@@ -5,15 +5,28 @@ import (
 )
 
 func DigitAdder(n int) int {
-	return
+	remainder := 0
+	sum := 0
+	for n !=0 {
+		remainder = n%10
+		sum += remainder
+		n=n/10
+	}
+	return sum
 }
 
-func DigitalRoots(n int) int {
-	for {
-		
+func DigitalRoot(n int) int {
+	for n>9 {
+		n=DigitAdder(n)
+	}
+	return n
+}
 
-		if n<10 {
-			break
-		}
+func main() {
+	for {
+		var n int
+		fmt.Println("Enter number: ")
+		fmt.Scanf("%d", &n)
+		fmt.Println(DigitalRoot(n))
 	}
 }
