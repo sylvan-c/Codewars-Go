@@ -7,17 +7,17 @@ import (
 func DigitAdder(n int) int {
 	remainder := 0
 	sum := 0
-	for n !=0 {
-		remainder = n%10
+	for n != 0 {
+		remainder = n % 10
 		sum += remainder
-		n=n/10
+		n = n / 10
 	}
 	return sum
 }
 
 func DigitalRoot(n int) int {
-	for n>9 {
-		n=DigitAdder(n)
+	for n > 9 {
+		n = DigitAdder(n)
 	}
 	return n
 }
