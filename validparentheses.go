@@ -4,29 +4,6 @@ import (
 	"fmt"
 )
 
-/*
-func count(str string, s string) int {
-	strslice:=strings.Split(str, "")
-	count := 0
-	for _,v:= range strslice {
-		if v==s {
-			count++
-		}
-	}
-	return count
-}
-*/
-
-func count(str string, r rune) int {
-	count := 0
-	for _, v := range str {
-		if v == r {
-			count++
-		}
-	}
-	return count
-}
-
 func ValidParentheses(parens string) bool {
 	var t rune = 0
 	for _, v := range parens {
